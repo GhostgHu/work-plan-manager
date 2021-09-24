@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: wpm-app
+  profiles:
+    active: dev

@@ -1,4 +1,4 @@
-package com.shimengjie.wpm.user.config;
+package com.shimengjie.wpm.work.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2021/9/23 21:37
  **/
 @Configuration
-@ComponentScan(basePackages = {"com.shimengjie.wpm.user"})
-public class SPIConfig {
+@ComponentScan(basePackages = {"com.shimengjie.wpm.work"})
+public class WorkSPIConfig {
 }

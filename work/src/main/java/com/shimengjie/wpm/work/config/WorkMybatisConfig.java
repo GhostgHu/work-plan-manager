@@ -1,4 +1,4 @@
-package com.shimengjie.wpm.user.config;
+package com.shimengjie.wpm.work.config;
 
 import org.springframework.context.annotation.Configuration;
 import tk.mybatis.spring.annotation.MapperScan;
@@ -8,6 +8,6 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @date 2021/9/22 19:12
  **/
 @Configuration
-@MapperScan("com.shimengjie.wpm.user.port.adapter.persistence.repository.mapper")
-public class MybatisConfig {
+@MapperScan("com.shimengjie.wpm.work.port.adapter.persistence.repository.mapper")
+public class WorkMybatisConfig {
 }

@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>app</artifactId>
+    <artifactId>work</artifactId>
     <version>0.0.1</version>
     <name>app</name>
     <packaging>jar</packaging>
@@ -45,13 +45,6 @@
         <dependency>
             <groupId>com.shimengjie.wpm</groupId>
             <artifactId>user</artifactId>
-            <version>0.0.1</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.shimengjie.wpm</groupId>
-            <artifactId>work</artifactId>
             <version>0.0.1</version>
             <scope>compile</scope>
         </dependency>

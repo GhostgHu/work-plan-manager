@@ -1,6 +1,6 @@
 package com.shimengjie.wpm.app.port.adapter.user;
 
-import com.shimengjie.wpm.user.application.user.UserApplicationService;
+import com.shimengjie.wpm.user.application.UserApplicationService;
 import com.shimengjie.wpm.user.domain.model.user.User;
 import com.shimengjie.wpm.user.domain.model.user.command.UserUpdateCommand;
 import org.springframework.stereotype.Component;

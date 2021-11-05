@@ -5,7 +5,7 @@ import com.shimengjie.wpm.common.utils.StringUtils;
 import com.shimengjie.wpm.work.domain.model.activity.ActivityWork;
 import com.shimengjie.wpm.work.domain.model.activity.ActivityWorkRepository;
 import com.shimengjie.wpm.work.port.adapter.persistence.repository.mapper.ActivityWorkMapper;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.entity.Example;
 
 import javax.annotation.Resource;
@@ -17,7 +17,7 @@ import java.util.List;
  * @author shimengjie
  * @date 2021/9/22 17:29
  **/
-@Service
+@Component
 public class MybatisActivityWorkRepository implements ActivityWorkRepository {
 
     @Resource

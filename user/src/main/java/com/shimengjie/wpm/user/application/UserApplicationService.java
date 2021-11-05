@@ -1,7 +1,7 @@
-package com.shimengjie.wpm.user.application.user;
+package com.shimengjie.wpm.user.application;
 
 import com.shimengjie.wpm.user.domain.model.user.User;
-import com.shimengjie.wpm.user.domain.model.user.UserEntity;
+import com.shimengjie.wpm.user.domain.model.user.UserUpdateEntity;
 import com.shimengjie.wpm.user.domain.model.user.command.UserUpdateCommand;
 import com.shimengjie.wpm.user.port.adapter.persistence.repository.MybatisUserRepository;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,7 @@ public class UserApplicationService {
     public void updateById(Long id, UserUpdateCommand command) {
         User user = this.queryById(id);
 
-        UserEntity entity = new UserEntity(user, command);
+        UserUpdateEntity entity = new UserUpdateEntity(user, command);
         entity.changeUser();
 
         mybatisUserInfoRepository.updateByPrimaryKeySelective(user);

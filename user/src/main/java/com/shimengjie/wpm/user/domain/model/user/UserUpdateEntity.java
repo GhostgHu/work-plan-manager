@@ -7,16 +7,16 @@ import org.springframework.util.Assert;
  * @author shimengjie
  * @date 2021/9/23 17:35
  **/
-public class UserEntity {
+public class UserUpdateEntity {
 
     private User user;
 
     private UserUpdateCommand userUpdateCommand;
 
-    public UserEntity() {
+    public UserUpdateEntity() {
     }
 
-    public UserEntity(User user, UserUpdateCommand userUpdateCommand) {
+    public UserUpdateEntity(User user, UserUpdateCommand userUpdateCommand) {
         this.user = user;
         this.userUpdateCommand = userUpdateCommand;
     }

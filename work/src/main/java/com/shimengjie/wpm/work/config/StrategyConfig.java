@@ -17,7 +17,7 @@ import java.util.Map;
  * @date 2021/11/5 14:54
  **/
 @Configuration
-public class WorkStrategyConfig implements ApplicationContextAware, InitializingBean {
+public class StrategyConfig implements ApplicationContextAware, InitializingBean {
 
     private ApplicationContext applicationContext;
 

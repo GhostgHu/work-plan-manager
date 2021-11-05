@@ -3,6 +3,8 @@ package com.shimengjie.wpm.common.factory;
 import com.shimengjie.wpm.common.strategy.Strategy;
 
 /**
+ * 泛型 StrategyFactory 接口
+ *
  * @author shimengjie
  * @date 2021/11/5 14:41
  **/

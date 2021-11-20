@@ -1,7 +1,7 @@
 package com.shimengjie.wpm.work.port.adapter.persistence.repository;
 
-import com.shimengjie.wpm.common.utils.CollectionUtils;
-import com.shimengjie.wpm.common.utils.StringUtils;
+import com.shimengjie.wpm.common.utils.CollectionUtil;
+import com.shimengjie.wpm.common.utils.StringUtil;
 import com.shimengjie.wpm.work.domain.model.activity.ActivityWork;
 import com.shimengjie.wpm.work.domain.model.activity.ActivityWorkRepository;
 import com.shimengjie.wpm.work.port.adapter.persistence.repository.mapper.ActivityWorkMapper;
@@ -31,7 +31,7 @@ public class MybatisActivityWorkRepository implements ActivityWorkRepository {
      */
     @Override
     public List<Long> queryActivityWorkIdListByTitle(String title) {
-        if (StringUtils.isBlank(title)) {
+        if (StringUtil.isBlank(title)) {
             return activityWorkMapper.queryActivityWorkIds();
         } else {
             return activityWorkMapper.queryActivityWorkIdsByTitle(title);
@@ -40,7 +40,7 @@ public class MybatisActivityWorkRepository implements ActivityWorkRepository {
 
     @Override
     public List<ActivityWork> queryActivityWorkListByIds(Collection<Long> ids) {
-        if (CollectionUtils.isEmpty(ids)) {
+        if (CollectionUtil.isEmpty(ids)) {
             return new ArrayList<>(1);
         }
         Example example = new Example(ActivityWork.class);

@@ -1,11 +1,10 @@
 package com.shimengjie.wpm.authority.domain.model.commonauthority.aspect;
 
-import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.LoadingCache;
 import com.shimengjie.wpm.authority.domain.model.commonauthority.CommonAuthority;
 import com.shimengjie.wpm.authority.domain.model.commonauthority.annotation.EnableCommonAuthority;
 import com.shimengjie.wpm.common.exception.AccessDeniedException;
-import com.shimengjie.wpm.common.utils.BeanUtils;
+import com.shimengjie.wpm.common.utils.AnnotationUtil;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -32,7 +31,7 @@ public class CommonAuthorityAspect {
 
     @Before(value = "pointcut()")
     public void before(JoinPoint pjp) {
-        EnableCommonAuthority annotation = BeanUtils.findAnnotation(pjp, EnableCommonAuthority.class);
+        EnableCommonAuthority annotation = AnnotationUtil.findAnnotation(pjp, EnableCommonAuthority.class);
         if (null == annotation) {
             return;
         }

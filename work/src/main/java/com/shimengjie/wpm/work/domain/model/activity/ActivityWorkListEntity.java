@@ -1,6 +1,6 @@
 package com.shimengjie.wpm.work.domain.model.activity;
 
-import com.shimengjie.wpm.common.utils.CollectionUtils;
+import com.shimengjie.wpm.common.utils.CollectionUtil;
 import com.shimengjie.wpm.work.domain.model.activity.query.ActivityWorkListQuery;
 
 import java.util.Collections;
@@ -46,7 +46,7 @@ public class ActivityWorkListEntity {
      * 打乱 id 列表
      */
     public void shuffleIdList(List<Long> idList) {
-        if (CollectionUtils.isEmpty(idList)) {
+        if (CollectionUtil.isEmpty(idList)) {
             return;
         }
         Collections.shuffle(idList, new Random(activityWorkListQuery.getSeed()));
@@ -56,7 +56,7 @@ public class ActivityWorkListEntity {
      * 分页 idList
      */
     public List<Long> pagingIdList(List<Long> idList) {
-        return CollectionUtils.pagingList(idList, activityWorkListQuery.getPageNum(), activityWorkListQuery.getPageSize());
+        return CollectionUtil.pagingList(idList, activityWorkListQuery.getPageNum(), activityWorkListQuery.getPageSize());
     }
 
 

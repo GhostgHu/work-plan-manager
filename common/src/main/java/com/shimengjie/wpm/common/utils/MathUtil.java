@@ -4,7 +4,7 @@ package com.shimengjie.wpm.common.utils;
  * @author shimengjie
  * @date 2021/10/15 15:19
  **/
-public class MathUtils {
+public class MathUtil {
 
     /**
      * 分页显示时，计算页数

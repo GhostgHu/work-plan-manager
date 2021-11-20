@@ -1,6 +1,7 @@
 package com.shimengjie.wpm.common.utils;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.AnnotationUtils;
 
@@ -9,8 +10,9 @@ import java.lang.reflect.Method;
 
 /**
  * @author shimengjie
- */
-public class BeanUtils {
+ * @date 2021/11/19 9:25
+ **/
+public class AnnotationUtil {
 
     /**
      * 从切点上查询指定的注解
@@ -32,6 +34,4 @@ public class BeanUtils {
             return AnnotationUtils.findAnnotation(pjp.getSignature().getDeclaringType(), annotationType);
         }
     }
-
-
 }

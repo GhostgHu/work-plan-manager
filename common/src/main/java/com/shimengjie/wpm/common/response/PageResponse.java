@@ -1,7 +1,7 @@
 package com.shimengjie.wpm.common.response;
 
 
-import com.shimengjie.wpm.common.utils.MathUtils;
+import com.shimengjie.wpm.common.utils.MathUtil;
 import lombok.Getter;
 
 import java.util.List;
@@ -44,6 +44,6 @@ public class PageResponse<T> extends ArrayResponse<T> {
         super(dataList);
         this.total = total;
         this.seed = seed;
-        this.pages = MathUtils.computePageNum(total, pageSize);
+        this.pages = MathUtil.computePageNum(total, pageSize);
     }
 }

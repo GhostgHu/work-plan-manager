@@ -45,7 +45,7 @@ public class MybatisDeptRepository implements DeptRepository {
         }
         Example example = new Example(DeptDepth.class);
         example.orderBy("depth").desc();
-        example.createCriteria().andIn("dept_id", ids);
+        example.createCriteria().andIn("dept_id", ids).andGreaterThan("depth", 0);
         return deptDepthMapper.selectByExample(example);
     }
 
